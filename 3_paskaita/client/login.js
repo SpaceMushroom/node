@@ -13,7 +13,14 @@ document.querySelector('#login').addEventListener('click', (e) => {
         body: JSON.stringify({ pas: pas, email: email }),
     }).then(resp => resp.json())
     .then(response => {
-        res.textContent = response.message;
+        if (response.message == "logged in successfully") {
+            res.textContent = response.message;
+            setTimeout(() => {
+                window.open("index.html", "_blank")
+            }, 2000);
+        } else {
+            res.textContent = response.message;
+        }
     })
 })
 

@@ -29,3 +29,18 @@ span, p {
     display: grid;
     gap: 0.4rem;
 }
+
+#buttons {
+    display: grid;
+    justify-items: center;
+    margin: 1rem;
+}
+
+button {
+    margin: 0.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
