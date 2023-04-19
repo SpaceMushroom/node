@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <form id="logForm" action="">
+            <div class="inputContainer">
+                <label for="user">Email: <span id="emailExists"></span></label>
+                <input type="email" name="email" placeholder="Enter email" id="email" minlength ="6" maxlength="20" required>
+            </div>
+            <div class="inputContainer">
+                <label for="password">Password: <span class="alert" id="checkPas"></span></label>
+                <input type="password" name="pas" placeholder="Enter password" id="pas" minlength ="3" maxlength="20" required>
+            </div>
+            <div class="submit">
+                <input id="login" type="submit" value="Login">
+            </div>                
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
