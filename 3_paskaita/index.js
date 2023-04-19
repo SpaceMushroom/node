@@ -18,6 +18,22 @@ app.post("/users", (req, res) => {
     res.send(user);
 });
 
+app.post("/login", (req, res) => {
+    const loginUser = { pas: req.body.pas, email: req.body.email };
+    let msg = "";
+    users.forEach((user) => {
+        if (loginUser.email === user.email) {
+            if (loginUser.pas === user.pas) {
+                return msg = "logged in successfully";
+            } else {
+                return msg = "Wrong password";
+            }
+        } else {
+            return msg = "This email NOT exist";
+        }
+    });
+    res.send({ message: msg });
+});
 
 app.listen(port, () => {
     console.log(`Server is listening on port  ${port}`)
