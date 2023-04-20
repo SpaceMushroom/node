@@ -33,7 +33,7 @@ span, p {
 #buttons {
     display: grid;
     justify-items: center;
-    margin: 1rem;
+    margin: 0.5rem;
 }
 
 button {
