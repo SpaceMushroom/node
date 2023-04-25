@@ -70,31 +70,18 @@ app.get("/price/:minPrice/:maxPrice", (req, res) => {
 // turėtų turėD id, name, category, price ir stock laukus. UžDkrinkite, kad naujoji prekė 
 // neturėtų to paDes id kaip jau esančios prekės.
 
-// app.get("/add", (req, res) => {
-//   res.send(data);
-// });
-
-
-// app.post("/add", (req, res) => {
+app.post('/products', (req, res) => {
+  const newProduct = req.body; 
+  console.log(req.body)
+  const isIdExist = data.some((product) => product.id === newProduct.id);
   
-//   const highestId = data.reduce((maxId, obj) => {
-//     return obj.id > maxId ? obj.id : maxId;
-//   }, 0);
-//   console.log(highestId)
-//   //const id = 
-
-
-
-//   const item = {
-//     "id": 8,
-//     "name": "iPhone 14",
-//     "category": "Telefonai",
-//     "price": 1199,
-//     "stock": 15
-//     };
-//   data.push(item);
-//   res.send(data);
-// })
+  if (isIdExist) {
+    res.send('Product with this ID already exists.'); 
+  } else {
+    data.push(newProduct); 
+    res.send(req.body); 
+  }
+});
 
 app.listen(port, () => {
     console.log(`Server is runing on port  ${port}`)
