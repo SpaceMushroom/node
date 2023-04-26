@@ -13,14 +13,20 @@ app.get("/cart", (req, res) => {
 
 app.post("/cart", (req, res) => {
   const item = req.body;
+  //item.id = cart.length + 1;  //pridedamas ID automatiskai pagal krep6elio ilgi
   cart.push(item);
   res.send(item);
+  res.status(201).send(item); // grazina http statusa kuris nurodo responce busena
 });
 
 app.get("/cart/item/:id", (req, res) => {
   const id = req.params.id;
   const foundId = cart.find((item) => item.id === +id);
-  res.send(foundId); 
+  if (!foundId) {
+    res.status(404).send("Item not found")
+  } else {
+    res.send(foundId); 
+  }
 });
 
 app.listen(port, () => {
