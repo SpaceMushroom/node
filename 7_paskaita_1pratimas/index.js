@@ -24,7 +24,7 @@ app.post('/posts', (req, res) => {
 
 app.get('/posts/:id', (req, res) => {
   const id = +req.params.id;
-  const foundPost = posts.find((todo) => todo.id === id);
+  const foundPost = posts.find((post) => post.id === id);
   if (!foundPost) {
     res.status(404).send({ message: 'Post not found' });
   } else {
@@ -50,9 +50,9 @@ app.delete('/posts/:id', (req, res) => {
   if (index === -1) {
     res.status(404).send({ message: 'Post not found' });
   } else {
-    const deletingTodo = posts.find((post) => post.id === id);
+    const deletingPost = posts.find((post) => post.id === id);
     posts.splice(index, 1);
-    res.send(deletingTodo);
+    res.send(deletingPost);
   }
 });
 
