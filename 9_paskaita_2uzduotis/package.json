@@ -1,5 +1,5 @@
 {
-    "title": "9_paskaita_ 1uzduotis",
+    "title": "8_paskaita",
     "version": "1.0.0",
     "scripts": {
         "start": "node index.js",
