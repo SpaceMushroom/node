@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="new_membership.css">
+    <title>New Membership</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a id="aMemb" href="index.html">Memberships</a>
+            <a id="aUser" href="users.html">Users</a>
+        </nav>   
+    </header>
+    <main>
+        <div>
+            <h2>Create Membership</h2>
+        </div>
+        
+        <div id="container">
+            <div id="errDiv"><span id="error"></span></div>
+            <form id="membershipForm">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" minlength="4" placeholder="Name" required>
+                <label for="price">Membership Price</label>
+                <span class="input-symbol">
+                    <input type="number" name="price" step="0.01" id="price" minlength="1" placeholder="Membership Price" required>
+                </span>
+                <label for="description">Description</label>
+                <textarea name="description" id="description" cols="30" rows="10" minlength="10" required></textarea>
+                <div id="cancelDiv">
+                    <button id="cancel"><a href="index.html">Cancel</a></button>
+                </div>
+                <input id="btn" 
+                type="submit" value="New Membership">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright ©2023 Membership Manager</p>
+    </footer>
+    <script src="new_membership.js"></script>
+</body>
+</html>

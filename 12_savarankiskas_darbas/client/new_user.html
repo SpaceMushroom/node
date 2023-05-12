@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="new_membership.css">
+    <title>New User</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a id="aMemb" href="index.html">Memberships</a>
+            <a id="aUser" href="users.html">Users</a>
+        </nav>   
+    </header>
+    <main>
+        <div>
+            <h2>Create User</h2>
+        </div> 
+        <div id="container">
+            <div id="errDiv"><span id="error"></span></div>
+            <form id="userForm">
+                <div class="input">
+                    <label for="firstName">First Name <span class="redSpan">*</span></label>
+                    <input type="text" name="firstName" id="firstName" minlength="4" placeholder="First Name" required>
+                </div>
+                <div class="input">
+                    <label for="lastName">Last Name <span class="redSpan">*</span></label>
+                    <input type="text" name="lastName" id="lastName" minlength="4" placeholder="Last Name" required>
+                </div>
+                <div class="input">
+                    <label for="email">Email Address <span class="redSpan">*</span></label>
+                    <input type="email" name="email" id="email" placeholder="Email Address" required>
+                </div>
+                <div class="input" id="selectDiv">
+                    <label for="Change Membership">Change Membership</label>
+                    <select name="select" id="select"></select>
+                </div>
+                 <div id="btns">
+                    <button id="cancel"><a href="index.html">Cancel</a></button>
+                    <input id="btn" type="submit" value="New User">
+                </div>
+            </form>
+               
+        </div>
+    </main>
+    <footer>
+        <p>Copyright ©2023 Membership Manager</p>
+    </footer>
+    <script src="new_user.js"></script>
+</body>
+</html>

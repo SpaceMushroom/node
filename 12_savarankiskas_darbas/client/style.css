@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+header, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5dvh;
+}
+
+main {
+    height: 90dvh;
+    background-color: rgb(224, 236, 236);
+}
+a {
+    text-decoration: none;
+    color: blue;
+    margin: 1rem;
+}
+
+footer {
+    font-size: 10px;
+    background-color: rgb(224, 236, 236)
+}
+
+#fontSizeBig {
+    font-size: 1.5rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+.card {
+    background-color: azure;
+    min-width: 350px;
+    max-width: 400px;
+    height: 150px;
+    display: grid;
+    justify-items: center;
+    border: 1px solid rgb(215, 230, 238);
+}
+
+#main {
+    padding: 1rem 5rem;
+}
